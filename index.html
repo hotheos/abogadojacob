@@ -707,8 +707,6 @@
 
     <!-- Floating geometric decorations -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <!-- Gold scales of justice (large watermark, clearly visible) -->
-      <img src="gold-justice-emblem.png" alt="" class="absolute bottom-[5%] left-[2%] w-72 lg:w-96 opacity-25 hidden md:block pointer-events-none mix-blend-multiply" style="animation: float-slow 12s ease-in-out infinite;" loading="lazy">
       <!-- Gold circle (top-right) -->
       <div class="absolute top-[15%] right-[10%] w-40 h-40 rounded-full border border-brand-gold-muted opacity-40 hidden lg:block" style="animation: float-slow 8s ease-in-out infinite;"></div>
       <!-- Small gold dot -->
@@ -816,10 +814,6 @@
 
       <!-- Section header -->
       <div class="text-center mb-10 lg:mb-16 reveal relative flex flex-col items-center">
-        <!-- Option 4: Emblema de la Justicia visible above the header tag -->
-        <div class="w-20 h-20 mb-6 rounded-full overflow-hidden border border-brand-gold-muted bg-white p-1 shadow-md hover:scale-110 transition-transform duration-300 pointer-events-auto">
-          <img src="gold-justice-emblem.png" alt="Emblema de la Justicia" class="w-full h-full object-contain">
-        </div>
         <span class="relative inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Servicios</span>
         <h2 class="relative text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
           Áreas de <span class="text-gold-metallic">Especialización</span>
@@ -966,8 +960,6 @@
   <!-- CASOS DE ÉXITO (Success Cases) -->
   <!-- ═══════════════════════════════════════════ -->
   <section id="casos" class="py-14 sm:py-20 lg:py-28 bg-brand-vanilla relative overflow-hidden">
-    <!-- Scales of justice as background for cases section -->
-    <img src="gold-justice-emblem.png" alt="" class="absolute top-1/2 right-[5%] -translate-y-1/2 w-[400px] lg:w-[500px] opacity-35 pointer-events-none hidden md:block mix-blend-multiply" aria-hidden="true" loading="lazy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <!-- Section header -->
@@ -1233,10 +1225,12 @@
               </div>
             </div>
 
-            <!-- Option 4: Emblema de la Justicia visible below location card -->
-            <div class="flex justify-center lg:justify-start pt-4">
-              <div class="w-24 h-24 rounded-full overflow-hidden border border-brand-gold-muted bg-white p-1.5 shadow-lg hover:scale-105 transition-transform duration-300 pointer-events-auto">
-                <img src="gold-justice-emblem.png" alt="Emblema de la Justicia" class="w-full h-full object-contain">
+            <!-- Majestic Gold Justice Emblem under location details -->
+            <div class="flex justify-center lg:justify-start pt-8 lg:pt-14 reveal" style="transition-delay: 0.1s;">
+              <div class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-brand-gold/50 bg-gradient-to-b from-white to-brand-vanilla/40 p-4 lg:p-6 shadow-[0_20px_50px_rgba(184,134,11,0.12)] hover:shadow-[0_20px_50px_rgba(184,134,11,0.22)] hover:border-brand-gold hover:scale-105 transition-all duration-500 pointer-events-auto flex items-center justify-center group">
+                <!-- Inner golden accent circle -->
+                <div class="absolute inset-2 rounded-full border border-dashed border-brand-gold/25 group-hover:border-brand-gold/45 transition-colors duration-500"></div>
+                <img src="gold-justice-emblem.png" alt="Emblema de la Justicia" class="w-full h-full object-contain filter drop-shadow-[0_10px_15px_rgba(184,134,11,0.15)] relative z-10 transition-transform duration-500 group-hover:rotate-3">
               </div>
             </div>
           </div>
