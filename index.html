@@ -402,6 +402,15 @@
       background-clip: text;
     }
 
+    /* ═══ METALLIC GOLD TEXT ═══ */
+    .text-gold-metallic {
+      background: linear-gradient(135deg, #B8860B 0%, #D4A017 30%, #FFF4B0 50%, #D4A017 70%, #8B6508 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+    }
+
     /* ═══ SECTION DIVIDER (Elegant Scrollwork) ═══ */
     .section-divider {
       height: 48px;
@@ -695,14 +704,14 @@
     <div class="absolute inset-0 bg-gradient-to-br from-brand-vanilla via-white to-brand-vanilla/80"></div>
 
     <!-- Hero art decoration (right side, desktop) -->
-    <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-8 hidden lg:block pointer-events-none">
-      <img src="hero-art.jpg" alt="" class="w-full h-full object-cover mix-blend-multiply" aria-hidden="true" loading="lazy">
+    <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-35 hidden lg:block pointer-events-none">
+      <img src="hero-art-gold.png" alt="" class="w-full h-full object-contain object-right" aria-hidden="true" loading="lazy">
     </div>
 
     <!-- Floating geometric decorations -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <!-- Gold scales of justice (large watermark, clearly visible) -->
-      <img src="deco-balanza.png" alt="" class="absolute bottom-[5%] left-[2%] w-72 lg:w-96 opacity-15 hidden md:block pointer-events-none" style="animation: float-slow 12s ease-in-out infinite;" loading="lazy">
+      <img src="deco-balanza.png" alt="" class="absolute bottom-[5%] left-[2%] w-72 lg:w-96 opacity-25 hidden md:block pointer-events-none" style="animation: float-slow 12s ease-in-out infinite;" loading="lazy">
       <!-- Gold circle (top-right) -->
       <div class="absolute top-[15%] right-[10%] w-40 h-40 rounded-full border border-brand-gold-muted opacity-40 hidden lg:block" style="animation: float-slow 8s ease-in-out infinite;"></div>
       <!-- Small gold dot -->
@@ -803,14 +812,14 @@
   <!-- ═══════════════════════════════════════════ -->
   <section id="servicios" class="py-14 sm:py-20 lg:py-28 bg-brand-surface relative overflow-hidden">
     <!-- Laurel wreath as full section background -->
-    <img src="deco-laurel.png" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] lg:w-[600px] opacity-10 pointer-events-none" aria-hidden="true" loading="lazy">
+    <img src="deco-laurel.png" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] lg:w-[600px] opacity-20 pointer-events-none" aria-hidden="true" loading="lazy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <!-- Section header -->
       <div class="text-center mb-10 lg:mb-16 reveal relative">
         <span class="relative inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Servicios</span>
         <h2 class="relative text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-          Áreas de <span class="text-brand-primary-light">Especialización</span>
+          Áreas de <span class="text-gold-metallic">Especialización</span>
         </h2>
         <p class="relative text-brand-text-muted text-lg max-w-2xl mx-auto">Soluciones legales integrales, adaptadas a cada situación. Con estrategia, precisión y compromiso total con tus derechos.</p>
       </div>
@@ -955,14 +964,14 @@
   <!-- ═══════════════════════════════════════════ -->
   <section id="casos" class="py-14 sm:py-20 lg:py-28 bg-brand-vanilla relative overflow-hidden">
     <!-- Scales of justice as background for cases section -->
-    <img src="deco-balanza.png" alt="" class="absolute top-1/2 right-[5%] -translate-y-1/2 w-[400px] lg:w-[500px] opacity-10 pointer-events-none hidden md:block" aria-hidden="true" loading="lazy">
+    <img src="deco-balanza.png" alt="" class="absolute top-1/2 right-[5%] -translate-y-1/2 w-[400px] lg:w-[500px] opacity-20 pointer-events-none hidden md:block" aria-hidden="true" loading="lazy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <!-- Section header -->
       <div class="text-center mb-10 lg:mb-16 reveal">
         <span class="inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Resultados</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-          Casos de <span class="text-brand-primary-light">Éxito</span>
+          Casos de <span class="text-gold-metallic">Éxito</span>
         </h2>
         <p class="text-brand-text-muted text-lg max-w-2xl mx-auto">Historias reales de clientes que confiaron en nuestro trabajo. Próximamente, videos detallando cada caso.</p>
       </div>
@@ -1045,15 +1054,15 @@
   <!-- ═══════════════════════════════════════════ -->
   <section id="tips" class="py-14 sm:py-20 lg:py-28 bg-brand-surface relative overflow-hidden">
     <!-- Column as background for tips section -->
-    <img src="deco-columna.png" alt="" class="absolute top-[10%] left-[3%] h-[80%] opacity-15 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
-    <img src="deco-columna.png" alt="" class="absolute top-[10%] right-[3%] h-[80%] opacity-15 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
+    <img src="deco-columna.png" alt="" class="absolute top-[10%] left-[3%] h-[80%] opacity-25 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
+    <img src="deco-columna.png" alt="" class="absolute top-[10%] right-[3%] h-[80%] opacity-25 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <!-- Section header -->
       <div class="text-center mb-16 reveal">
         <span class="inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Educación Legal</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-          Tips <span class="text-brand-primary-light">Legales</span>
+          Tips <span class="text-gold-metallic">Legales</span>
         </h2>
         <p class="text-brand-text-muted text-lg max-w-2xl mx-auto">Conocimiento práctico y accesible para que conozcas tus derechos y tomes mejores decisiones.</p>
       </div>
@@ -1151,11 +1160,9 @@
   <!-- CONTACTO (Contact Form) -->
   <!-- ═══════════════════════════════════════════ -->
   <section id="contacto" class="py-14 sm:py-20 lg:py-28 bg-brand-vanilla relative overflow-hidden">
-    <!-- Decorative columns (desktop, much more visible) -->
-    <img src="deco-columna.png" alt="" class="absolute left-[2%] top-[10%] h-[80%] opacity-15 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
-    <img src="deco-columna.png" alt="" class="absolute right-[2%] top-[10%] h-[80%] opacity-15 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
-    <!-- Laurel behind form area -->
-    <img src="deco-laurel.png" alt="" class="absolute top-1/2 right-[15%] -translate-y-1/2 w-[350px] opacity-10 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
+    <!-- Gold hero art filigree flanking the contact section instead of decorative columns -->
+    <img src="hero-art-gold.png" alt="" class="absolute left-[2%] top-1/2 -translate-y-1/2 w-[350px] lg:w-[450px] opacity-25 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
+    <img src="hero-art-gold.png" alt="" class="absolute right-[2%] top-1/2 -translate-y-1/2 w-[350px] lg:w-[450px] opacity-25 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -1164,7 +1171,7 @@
         <div class="reveal">
           <span class="inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Contacto</span>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Hablemos de <span class="text-brand-primary-light">tu caso</span>
+            Hablemos de <span class="text-gold-metallic">tu caso</span>
           </h2>
           <p class="text-brand-text-muted text-lg leading-relaxed mb-10">
             Cada situación legal es única. Escríbeme y juntos encontraremos la mejor estrategia para proteger tus derechos.
