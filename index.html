@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Abogado Jacob: servicios legales especializados en litigio civil y penal, derecho público y administrativo, y gestión de multas. Agenda tu consulta hoy.">
+  <meta name="keywords" content="abogado, abogado Pereira, litigio civil, derecho penal, derecho administrativo, gestión de multas, consulta legal, Risaralda">
+  <meta name="author" content="Abogado Jacob">
+  <meta name="theme-color" content="#004D40">
+
+  <title>Abogado Jacob | Servicios Legales Especializados en Pereira</title>
+
+  <!-- Favicon SVG (adapts to dark/light mode) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23004D40'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Inter,system-ui,sans-serif' font-weight='700' font-size='18' fill='white'%3EJ%3C/text%3E%3C/svg%3E">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand-primary: #004D40;
+      --color-brand-primary-light: #00695C;
+      --color-brand-primary-dark: #003D33;
+      --color-brand-accent: #D32F2F;
+      --color-brand-accent-hover: #B71C1C;
+      --color-brand-surface: #212121;
+      --color-brand-surface-light: #2C2C2C;
+      --color-brand-text: #F5F5F5;
+      --color-brand-text-muted: #BDBDBD;
+      --font-sans: 'Inter', sans-serif;
+    }
+  </style>
+
+  <style>
+    /* ═══ PRELOADER ═══ */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #004D40;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #preloader.loaded {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .preloader-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 32px;
+      color: white;
+      animation: preloader-pulse 1.2s ease-in-out infinite;
+    }
+    .preloader-bar-track {
+      width: 120px;
+      height: 3px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 2px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+    .preloader-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: white;
+      border-radius: 2px;
+      animation: preloader-fill 1.2s ease-out forwards;
+    }
+    @keyframes preloader-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    @keyframes preloader-fill {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    /* ═══ BASE ═══ */
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* Custom scrollbar (desktop only) */
+    @media (min-width: 768px) {
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #212121; }
+      ::-webkit-scrollbar-thumb { background: #004D40; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #00695C; }
+    }
+
+    /* ═══ REVEAL ON SCROLL ═══ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══ HERO ═══ */
+    .hero-photo-mask {
+      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    @media (max-width: 768px) {
+      .hero-photo-mask { clip-path: none; }
+    }
+
+    /* ═══ PARALLAX ═══ */
+    .parallax-layer {
+      will-change: transform;
+      transition: transform 0.1s linear;
+    }
+    @media (max-width: 1024px) {
+      .parallax-layer { will-change: auto; }
+    }
+
+    /* ═══ NAV ACTIVE STATE ═══ */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #00695C;
+      border-radius: 1px;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    .nav-link.active {
+      color: white !important;
+    }
+    .nav-link.active::after {
+      width: 60%;
+      left: 20%;
+    }
+
+    /* ═══ SERVICE CARD ═══ */
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 77, 64, 0.15), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+    @media (hover: hover) {
+      .service-card {
+        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .service-card:hover::before { opacity: 1; }
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 77, 64, 0.25);
+      }
+    }
+
+    /* ═══ FLOATING BUTTONS ═══ */
+    .floating-btn {
+      animation: pulse-soft 2.5s infinite;
+    }
+    @keyframes pulse-soft {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 77, 64, 0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(0, 77, 64, 0); }
+    }
+
+    /* ═══ TIP CARD ═══ */
+    .tip-card {
+      transition: border-color 0.3s ease;
+    }
+    @media (hover: hover) {
+      .tip-card {
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+      .tip-card:hover {
+        transform: translateY(-4px);
+        border-color: #004D40;
+      }
+    }
+
+    /* ═══ VIDEO PLACEHOLDER ═══ */
+    .video-placeholder {
+      transition: box-shadow 0.4s ease;
+    }
+    @media (hover: hover) {
+      .video-placeholder {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .video-placeholder:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    /* ═══ NAVBAR BLUR ═══ */
+    .nav-blur {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    /* ═══ FORM ═══ */
+    .form-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 77, 64, 0.4);
+    }
+
+    /* Form validation states */
+    .field-wrapper { position: relative; }
+    .field-wrapper .validation-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+    .field-wrapper.valid .validation-icon.icon-valid { opacity: 1; }
+    .field-wrapper.invalid .validation-icon.icon-invalid { opacity: 1; }
+    .field-wrapper.valid .form-input { border-color: #00695C; }
+    .field-wrapper.invalid .form-input { border-color: #D32F2F; }
+    .field-error {
+      font-size: 12px;
+      color: #ef5350;
+      margin-top: 4px;
+      min-height: 18px;
+      transition: opacity 0.2s ease;
+    }
+
+    /* Select styling */
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23BDBDBD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 18px;
+      padding-right: 44px;
+    }
+    .form-select:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 77, 64, 0.4);
+    }
+
+    /* ═══ GRADIENT TEXT ═══ */
+    .gradient-text {
+      background: linear-gradient(135deg, #F5F5F5, #80CBC4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ═══ SECTION DIVIDER ═══ */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #004D40, transparent);
+    }
+
+    /* ═══ BACK TO TOP ═══ */
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #212121;
+      border: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (min-width: 768px) {
+      #back-to-top {
+        bottom: 28px;
+        right: 28px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    @media (hover: hover) {
+      #back-to-top:hover {
+        background: #004D40;
+      }
+    }
+    .progress-ring-circle {
+      transition: stroke-dashoffset 0.15s linear;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+
+    /* ═══ CTA BANNER ═══ */
+    .cta-banner-glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(211, 47, 47, 0.15);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    /* ═══ MOBILE OPTIMIZATIONS ═══ */
+
+    /* Prevent iOS zoom on input focus */
+    @media (max-width: 768px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    /* Mobile menu slide animation */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #mobile-menu.menu-open {
+      max-height: 300px;
+    }
+
+    /* Form fields scroll margin (keyboard avoidance) */
+    .form-input, .form-select {
+      scroll-margin-top: 100px;
+    }
+
+    /* Safe area for floating elements */
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+      #floating-buttons {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      footer {
+        padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 2.5rem);
+      }
+    }
+
+    /* ═══ TIP DIALOG / MODAL ═══ */
+    #tip-dialog {
+      border: none;
+      background: transparent;
+      padding: 0;
+      max-width: min(640px, calc(100vw - 2rem));
+      max-height: min(85vh, 85dvh);
+      width: 100%;
+      border-radius: 1.25rem;
+      overflow: visible;
+    }
+    #tip-dialog::backdrop {
+      background: rgba(0, 0, 0, 0);
+      transition: background 0.3s ease;
+    }
+    #tip-dialog[open]::backdrop {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    #tip-dialog .dialog-panel {
+      background: #212121;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      max-height: min(85vh, 85dvh);
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.92) translateY(20px);
+      opacity: 0;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                  opacity 0.35s ease;
+    }
+    #tip-dialog[open] .dialog-panel {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+    #tip-dialog .dialog-body {
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      flex: 1;
+      scrollbar-width: thin;
+      scrollbar-color: #004D40 transparent;
+    }
+    #tip-dialog .dialog-body::-webkit-scrollbar { width: 6px; }
+    #tip-dialog .dialog-body::-webkit-scrollbar-thumb {
+      background: #004D40;
+      border-radius: 3px;
+    }
+    /* Loading skeleton */
+    .tip-loading-skeleton {
+      animation: skeleton-pulse 1s ease-in-out infinite;
+    }
+    @keyframes skeleton-pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+    /* Step number circle */
+    .step-number {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 50%;
+      background: rgba(0, 77, 64, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #00695C;
+    }
+    /* Tip card clickable indicator */
+    .tip-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #00695C;
+      margin-top: 12px;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+    .tip-card:hover .tip-card-link,
+    .tip-card:active .tip-card-link {
+      color: #80CBC4;
+      gap: 8px;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-surface text-brand-text">
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PRELOADER -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="preloader" aria-hidden="true">
+    <div class="flex flex-col items-center">
+      <div class="preloader-logo">J</div>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- NAVIGATION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur bg-brand-surface/80 border-b border-white/5 transition-all duration-300" style="padding-top: env(safe-area-inset-top, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-lg bg-brand-primary flex items-center justify-center text-white font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+            J
+          </div>
+          <span class="text-lg font-bold tracking-tight hidden sm:block">
+            Abogado <span class="text-brand-primary-light">Jacob</span>
+          </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#servicios" data-section="servicios" class="nav-link px-4 py-2 text-sm font-medium text-brand-text-muted hover:text-white transition-colors rounded-lg hover:bg-white/5">Servicios</a>
+          <a href="#casos" data-section="casos" class="nav-link px-4 py-2 text-sm font-medium text-brand-text-muted hover:text-white transition-colors rounded-lg hover:bg-white/5">Casos de Éxito</a>
+          <a href="#tips" data-section="tips" class="nav-link px-4 py-2 text-sm font-medium text-brand-text-muted hover:text-white transition-colors rounded-lg hover:bg-white/5">Tips Legales</a>
+          <a href="#contacto" data-section="contacto" class="ml-2 px-5 py-2.5 bg-brand-accent hover:bg-brand-accent-hover text-white text-sm font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20">
+            Contacto
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Abrir menú" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu (animated slide) -->
+    <div id="mobile-menu" class="md:hidden border-t border-white/5 bg-brand-surface/95 nav-blur">
+      <div class="px-4 py-4 space-y-1">
+        <a href="#servicios" class="block px-4 py-3.5 text-base font-medium text-brand-text-muted hover:text-white hover:bg-white/5 rounded-lg transition-colors min-h-[44px] flex items-center">Servicios</a>
+        <a href="#casos" class="block px-4 py-3.5 text-base font-medium text-brand-text-muted hover:text-white hover:bg-white/5 rounded-lg transition-colors min-h-[44px] flex items-center">Casos de Éxito</a>
+        <a href="#tips" class="block px-4 py-3.5 text-base font-medium text-brand-text-muted hover:text-white hover:bg-white/5 rounded-lg transition-colors min-h-[44px] flex items-center">Tips Legales</a>
+        <a href="#contacto" class="block px-4 py-3.5 mt-2 bg-brand-accent hover:bg-brand-accent-hover text-white text-base font-semibold rounded-lg text-center transition-colors min-h-[44px] flex items-center justify-center">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- HERO SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="hero" class="relative flex items-center bg-brand-primary overflow-hidden" style="min-height: 100dvh;">
+    <!-- Background pattern (parallax layer) -->
+    <div class="absolute inset-0 opacity-5 parallax-layer" data-parallax-speed="0.15">
+      <svg width="100%" height="100%">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)"/>
+      </svg>
+    </div>
+
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-primary-dark to-brand-surface/50"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center pt-20 pb-8 lg:py-0" style="min-height: 100dvh;">
+
+        <!-- Left: Content -->
+        <div class="order-2 lg:order-1 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm font-medium text-white/80 mb-6 backdrop-blur-sm">
+            <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+            Disponible para consultas
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight tracking-tight mb-6">
+            <span class="gradient-text">Tu defensa,</span><br>
+            <span class="text-white">mi compromiso.</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            Soy <strong class="text-white">Jacob</strong>, abogado especializado en litigio civil, penal y derecho administrativo. Protejo tus derechos con estrategia, experiencia y resultados.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#contacto" id="cta-hero" class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/30 hover:scale-105">
+              Agendar Consulta
+              <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="#servicios" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/20 hover:border-white/40 text-white font-semibold text-lg rounded-xl transition-all duration-300 hover:bg-white/5">
+              Ver Servicios
+            </a>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="flex items-center gap-6 mt-10 justify-center lg:justify-start text-white/50 text-sm">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>Experiencia comprobada</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <span>Confidencialidad total</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Photo (parallax layer) -->
+        <div class="order-1 lg:order-2 flex justify-center lg:justify-end parallax-layer" data-parallax-speed="-0.08">
+          <div class="relative w-full max-w-xs sm:max-w-sm lg:max-w-lg">
+            <!-- Decorative ring -->
+            <div class="absolute -inset-4 bg-gradient-to-br from-brand-accent/20 to-brand-primary-light/20 rounded-2xl blur-2xl"></div>
+            <div class="relative hero-photo-mask rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
+              <img
+                src="foto-jacob.jpg"
+                alt="Abogado Jacob, profesional legal en Pereira"
+                class="w-full h-auto object-cover max-h-72 sm:max-h-96 lg:max-h-none"
+                fetchpriority="high"
+                width="800"
+                height="800"
+              >
+              <!-- Photo overlay gradient -->
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/30 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator (hidden on very small screens to save space) -->
+    <div class="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 animate-bounce hidden sm:flex">
+      <span class="text-xs font-medium tracking-widest uppercase">Descubre más</span>
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SERVICIOS (Services Hub) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="servicios" class="py-14 sm:py-20 lg:py-28 bg-brand-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section header -->
+      <div class="text-center mb-10 lg:mb-16 reveal">
+        <span class="inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Servicios</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          Áreas de <span class="text-brand-primary-light">Especialización</span>
+        </h2>
+        <p class="text-brand-text-muted text-lg max-w-2xl mx-auto">Soluciones legales integrales, adaptadas a cada situación. Con estrategia, precisión y compromiso total con tus derechos.</p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8" id="services-grid">
+
+        <!-- Card 1: Litigio Civil y Penal -->
+        <div class="service-card reveal bg-brand-surface-light rounded-2xl p-6 sm:p-8 border border-white/5 group cursor-default">
+          <div class="relative z-10">
+            <div class="w-14 h-14 rounded-xl bg-brand-primary/20 flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-brand-primary/30">
+              <svg class="w-7 h-7 text-brand-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Litigio Civil y Penal</h3>
+            <p class="text-brand-text-muted leading-relaxed mb-6">Representación estratégica en procesos judiciales civiles y penales. Defensa sólida, enfocada en proteger tus intereses con resultados medibles.</p>
+            <ul class="space-y-2 text-sm text-brand-text-muted">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Defensa penal
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Demandas civiles
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Mediación y conciliación
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 2: Derecho Público y Administrativo -->
+        <div class="service-card reveal bg-brand-surface-light rounded-2xl p-8 border border-white/5 group cursor-default">
+          <div class="relative z-10">
+            <div class="w-14 h-14 rounded-xl bg-brand-primary/20 flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-brand-primary/30">
+              <svg class="w-7 h-7 text-brand-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Derecho Público y Administrativo</h3>
+            <p class="text-brand-text-muted leading-relaxed mb-6">Asesoría experta en relaciones con entidades gubernamentales, contratación pública y procedimientos administrativos.</p>
+            <ul class="space-y-2 text-sm text-brand-text-muted">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Derecho constitucional
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Contratación pública
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Acciones de tutela
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: Gestión de Multas -->
+        <div class="service-card reveal bg-brand-surface-light rounded-2xl p-8 border border-white/5 group cursor-default">
+          <div class="relative z-10">
+            <div class="w-14 h-14 rounded-xl bg-brand-primary/20 flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-brand-primary/30">
+              <svg class="w-7 h-7 text-brand-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Gestión de Multas</h3>
+            <p class="text-brand-text-muted leading-relaxed mb-6">Gestión profesional para impugnar, reducir o resolver multas de tránsito, administrativas y fiscales de manera eficiente.</p>
+            <ul class="space-y-2 text-sm text-brand-text-muted">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Multas de tránsito
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Sanciones administrativas
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-primary-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Recursos de apelación
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CTA BANNER -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="relative py-12 sm:py-16 lg:py-20 bg-brand-primary overflow-hidden">
+    <!-- Decorative glows -->
+    <div class="cta-banner-glow -top-20 -left-20"></div>
+    <div class="cta-banner-glow -bottom-20 -right-20"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm font-medium text-white/80 mb-6 backdrop-blur-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Atención personalizada
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+        ¿Necesitas asesoría <span class="text-red-300">urgente</span>?
+      </h2>
+      <p class="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+        No dejes que una situación legal se complique. Cuanto antes actúes, más opciones tendrás. Agenda tu consulta hoy mismo.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contacto" class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/30 hover:scale-105">
+          Habla conmigo ahora
+          <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/573001234567?text=Hola%2C%20necesito%20asesor%C3%ADa%20legal%20urgente." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/20 hover:border-white/40 text-white font-semibold text-lg rounded-xl transition-all duration-300 hover:bg-white/5">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp directo
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CASOS DE ÉXITO (Success Cases) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="casos" class="py-14 sm:py-20 lg:py-28 bg-brand-primary/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section header -->
+      <div class="text-center mb-10 lg:mb-16 reveal">
+        <span class="inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Resultados</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          Casos de <span class="text-brand-primary-light">Éxito</span>
+        </h2>
+        <p class="text-brand-text-muted text-lg max-w-2xl mx-auto">Historias reales de clientes que confiaron en nuestro trabajo. Próximamente, videos detallando cada caso.</p>
+      </div>
+
+      <!-- Video Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="videos-grid">
+
+        <!-- Video placeholder 1 -->
+        <div class="video-placeholder reveal rounded-2xl overflow-hidden bg-brand-surface-light border border-white/5">
+          <div class="relative aspect-video bg-brand-surface flex items-center justify-center group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-surface"></div>
+            <div class="relative z-10 w-16 h-16 rounded-full bg-brand-accent/90 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-lg shadow-red-500/20">
+              <svg class="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-white mb-1">Caso de defensa penal exitosa</h3>
+            <p class="text-sm text-brand-text-muted">Próximamente</p>
+          </div>
+        </div>
+
+        <!-- Video placeholder 2 -->
+        <div class="video-placeholder reveal rounded-2xl overflow-hidden bg-brand-surface-light border border-white/5">
+          <div class="relative aspect-video bg-brand-surface flex items-center justify-center group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-surface"></div>
+            <div class="relative z-10 w-16 h-16 rounded-full bg-brand-accent/90 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-lg shadow-red-500/20">
+              <svg class="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-white mb-1">Reducción de multas administrativas</h3>
+            <p class="text-sm text-brand-text-muted">Próximamente</p>
+          </div>
+        </div>
+
+        <!-- Video placeholder 3 -->
+        <div class="video-placeholder reveal rounded-2xl overflow-hidden bg-brand-surface-light border border-white/5">
+          <div class="relative aspect-video bg-brand-surface flex items-center justify-center group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-surface"></div>
+            <div class="relative z-10 w-16 h-16 rounded-full bg-brand-accent/90 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-lg shadow-red-500/20">
+              <svg class="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-white mb-1">Tutela ganada en derecho público</h3>
+            <p class="text-sm text-brand-text-muted">Próximamente</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Integration note -->
+      <div class="mt-10 text-center reveal">
+        <p class="inline-flex items-center gap-2 text-sm text-brand-text-muted bg-brand-surface-light px-5 py-3 rounded-full border border-white/5">
+          <svg class="w-4 h-4 text-brand-primary-light" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          Espacio listo para integrar tus videos de YouTube
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TIPS LEGALES (Pedagogical Section) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="tips" class="py-14 sm:py-20 lg:py-28 bg-brand-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section header -->
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Educación Legal</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          Tips <span class="text-brand-primary-light">Legales</span>
+        </h2>
+        <p class="text-brand-text-muted text-lg max-w-2xl mx-auto">Conocimiento práctico y accesible para que conozcas tus derechos y tomes mejores decisiones.</p>
+      </div>
+
+      <!-- Tips Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="tips-grid">
+
+        <div class="tip-card reveal bg-brand-surface-light rounded-xl p-6 border border-white/5 hover:border-brand-primary/40 cursor-pointer" data-tip-id="0" role="button" tabindex="0">
+          <div class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center mb-4">
+            <span class="text-brand-accent font-bold text-lg">01</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 text-sm">Conoce tus derechos al ser detenido</h3>
+          <p class="text-brand-text-muted text-xs leading-relaxed">Tienes derecho a guardar silencio, a un abogado y a una llamada. No firmes nada sin asesoría legal.</p>
+          <span class="tip-card-link">Leer más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+
+        <div class="tip-card reveal bg-brand-surface-light rounded-xl p-6 border border-white/5 hover:border-brand-primary/40 cursor-pointer" data-tip-id="1" role="button" tabindex="0">
+          <div class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center mb-4">
+            <span class="text-brand-accent font-bold text-lg">02</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 text-sm">Plazos para impugnar una multa</h3>
+          <p class="text-brand-text-muted text-xs leading-relaxed">Generalmente tienes entre 5 y 10 días hábiles para presentar un recurso. Actúa rápido y documenta todo.</p>
+          <span class="tip-card-link">Leer más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+
+        <div class="tip-card reveal bg-brand-surface-light rounded-xl p-6 border border-white/5 hover:border-brand-primary/40 cursor-pointer" data-tip-id="2" role="button" tabindex="0">
+          <div class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center mb-4">
+            <span class="text-brand-accent font-bold text-lg">03</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 text-sm">Documenta todo contrato por escrito</h3>
+          <p class="text-brand-text-muted text-xs leading-relaxed">Un acuerdo verbal es difícil de probar. Siempre exige contratos escritos y conserva copias firmadas.</p>
+          <span class="tip-card-link">Leer más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+
+        <div class="tip-card reveal bg-brand-surface-light rounded-xl p-6 border border-white/5 hover:border-brand-primary/40 cursor-pointer" data-tip-id="3" role="button" tabindex="0">
+          <div class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center mb-4">
+            <span class="text-brand-accent font-bold text-lg">04</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 text-sm">La tutela protege tus derechos fundamentales</h3>
+          <p class="text-brand-text-muted text-xs leading-relaxed">Si una entidad vulnera tus derechos fundamentales, la acción de tutela es tu herramienta más poderosa.</p>
+          <span class="tip-card-link">Leer más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+
+        <div class="tip-card reveal bg-brand-surface-light rounded-xl p-6 border border-white/5 hover:border-brand-primary/40 cursor-pointer" data-tip-id="4" role="button" tabindex="0">
+          <div class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center mb-4">
+            <span class="text-brand-accent font-bold text-lg">05</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 text-sm">Prescripción de deudas</h3>
+          <p class="text-brand-text-muted text-xs leading-relaxed">Las deudas tienen un plazo de prescripción legal. Conocerlo puede ser clave para tu situación financiera.</p>
+          <span class="tip-card-link">Leer más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+
+        <div class="tip-card reveal bg-brand-surface-light rounded-xl p-6 border border-white/5 hover:border-brand-primary/40 cursor-pointer" data-tip-id="5" role="button" tabindex="0">
+          <div class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center mb-4">
+            <span class="text-brand-accent font-bold text-lg">06</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 text-sm">Derecho de petición: tu voz ante el Estado</h3>
+          <p class="text-brand-text-muted text-xs leading-relaxed">Cualquier persona puede elevar una petición ante entidades públicas. Estas tienen entre 10 y 30 días para responder.</p>
+          <span class="tip-card-link">Leer más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+
+        <div class="tip-card reveal bg-brand-surface-light rounded-xl p-6 border border-white/5 hover:border-brand-primary/40 cursor-pointer" data-tip-id="6" role="button" tabindex="0">
+          <div class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center mb-4">
+            <span class="text-brand-accent font-bold text-lg">07</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 text-sm">No ignores una notificación judicial</h3>
+          <p class="text-brand-text-muted text-xs leading-relaxed">Ignorar citaciones o notificaciones puede resultar en fallos en tu contra. Responde siempre a tiempo.</p>
+          <span class="tip-card-link">Leer más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+
+        <div class="tip-card reveal bg-brand-surface-light rounded-xl p-6 border border-white/5 hover:border-brand-primary/40 cursor-pointer" data-tip-id="7" role="button" tabindex="0">
+          <div class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center mb-4">
+            <span class="text-brand-accent font-bold text-lg">08</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 text-sm">Consulta legal preventiva</h3>
+          <p class="text-brand-text-muted text-xs leading-relaxed">Prevenir es más económico que litigar. Una consulta a tiempo puede ahorrarte problemas legales costosos.</p>
+          <span class="tip-card-link">Leer más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CONTACTO (Contact Form) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="contacto" class="py-14 sm:py-20 lg:py-28 bg-brand-primary/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+        <!-- Left: Info -->
+        <div class="reveal">
+          <span class="inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Contacto</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            Hablemos de <span class="text-brand-primary-light">tu caso</span>
+          </h2>
+          <p class="text-brand-text-muted text-lg leading-relaxed mb-10">
+            Cada situación legal es única. Escríbeme y juntos encontraremos la mejor estrategia para proteger tus derechos.
+          </p>
+
+          <!-- Contact info cards -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-4 p-4 bg-brand-surface-light rounded-xl border border-white/5">
+              <div class="w-12 h-12 rounded-lg bg-brand-primary/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-brand-text-muted">Email</p>
+                <p class="text-white font-medium">contacto@abogadojacob.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 bg-brand-surface-light rounded-xl border border-white/5">
+              <div class="w-12 h-12 rounded-lg bg-brand-primary/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-brand-text-muted">Teléfono</p>
+                <p class="text-white font-medium">+57 300 123 4567</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 bg-brand-surface-light rounded-xl border border-white/5">
+              <div class="w-12 h-12 rounded-lg bg-brand-primary/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-brand-text-muted">Ubicación</p>
+                <p class="text-white font-medium">Pereira, Risaralda</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="reveal" style="transition-delay: 0.15s;">
+          <form id="contact-form" class="bg-brand-surface-light rounded-2xl p-6 sm:p-8 border border-white/5 shadow-xl shadow-black/20" novalidate>
+            <h3 class="text-xl font-bold text-white mb-6">Envía tu mensaje</h3>
+
+            <div class="space-y-5">
+              <!-- Nombre -->
+              <div>
+                <label for="nombre" class="block text-sm font-medium text-brand-text-muted mb-2">Nombre completo</label>
+                <div class="field-wrapper">
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    minlength="3"
+                    placeholder="Tu nombre"
+                    class="form-input w-full px-4 py-3 bg-brand-surface border border-white/10 rounded-xl text-white placeholder-white/30 transition-all duration-300 focus:border-brand-primary-light"
+                  >
+                  <!-- Valid icon -->
+                  <svg class="validation-icon icon-valid w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                  <!-- Invalid icon -->
+                  <svg class="validation-icon icon-invalid w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+                </div>
+                <p class="field-error" data-error-for="nombre"></p>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="email" class="block text-sm font-medium text-brand-text-muted mb-2">Correo electrónico</label>
+                <div class="field-wrapper">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="tu@email.com"
+                    class="form-input w-full px-4 py-3 bg-brand-surface border border-white/10 rounded-xl text-white placeholder-white/30 transition-all duration-300 focus:border-brand-primary-light"
+                  >
+                  <svg class="validation-icon icon-valid w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                  <svg class="validation-icon icon-invalid w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+                </div>
+                <p class="field-error" data-error-for="email"></p>
+              </div>
+
+              <!-- Asunto (SELECT dropdown) -->
+              <div>
+                <label for="asunto" class="block text-sm font-medium text-brand-text-muted mb-2">Asunto</label>
+                <div class="field-wrapper">
+                  <select
+                    id="asunto"
+                    name="asunto"
+                    required
+                    class="form-select w-full px-4 py-3 bg-brand-surface border border-white/10 rounded-xl text-white transition-all duration-300 focus:border-brand-primary-light cursor-pointer"
+                  >
+                    <option value="" disabled selected class="text-white/30">Selecciona un asunto</option>
+                    <option value="Litigio Civil">Litigio Civil</option>
+                    <option value="Defensa Penal">Defensa Penal</option>
+                    <option value="Derecho Público y Administrativo">Derecho Público y Administrativo</option>
+                    <option value="Gestión de Multas">Gestión de Multas</option>
+                    <option value="Consulta General">Consulta General</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                  <svg class="validation-icon icon-valid w-5 h-5 text-green-500" style="right: 44px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="field-error" data-error-for="asunto"></p>
+              </div>
+
+              <!-- Mensaje -->
+              <div>
+                <label for="mensaje" class="block text-sm font-medium text-brand-text-muted mb-2">Mensaje</label>
+                <div class="field-wrapper">
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    required
+                    minlength="10"
+                    rows="4"
+                    placeholder="Describe brevemente tu situación..."
+                    class="form-input w-full px-4 py-3 bg-brand-surface border border-white/10 rounded-xl text-white placeholder-white/30 transition-all duration-300 focus:border-brand-primary-light resize-none"
+                  ></textarea>
+                  <!-- No icon for textarea (multi-line) -->
+                </div>
+                <p class="field-error" data-error-for="mensaje"></p>
+              </div>
+
+              <!-- Submit -->
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full px-6 py-4 bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span id="btn-text">Enviar Mensaje</span>
+                <svg id="btn-icon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+                <svg id="btn-spinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Success message (hidden) -->
+            <div id="form-success" class="hidden mt-4 p-4 bg-brand-primary/20 border border-brand-primary-light/30 rounded-xl text-center">
+              <p class="text-brand-primary-light font-semibold">¡Mensaje enviado con éxito!</p>
+              <p class="text-sm text-brand-text-muted mt-1">Te responderé lo antes posible.</p>
+            </div>
+
+            <!-- Error message (hidden) -->
+            <div id="form-error" class="hidden mt-4 p-4 bg-brand-accent/20 border border-brand-accent/30 rounded-xl text-center">
+              <p class="text-brand-accent font-semibold">Hubo un error al enviar</p>
+              <p class="text-sm text-brand-text-muted mt-1">Por favor intenta de nuevo o contáctame directamente.</p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════ -->
+  <footer class="bg-brand-surface border-t border-white/5 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center text-white font-bold text-sm">J</div>
+          <span class="text-sm text-brand-text-muted">&copy; 2025 Abogado Jacob. Todos los derechos reservados.</span>
+        </div>
+        <div class="flex items-center gap-4 sm:gap-6">
+          <a href="#hero" class="text-sm text-brand-text-muted hover:text-white transition-colors py-2 px-1 min-h-[44px] flex items-center">Inicio</a>
+          <a href="#servicios" class="text-sm text-brand-text-muted hover:text-white transition-colors py-2 px-1 min-h-[44px] flex items-center">Servicios</a>
+          <a href="#contacto" class="text-sm text-brand-text-muted hover:text-white transition-colors py-2 px-1 min-h-[44px] flex items-center">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TIP DETAIL DIALOG -->
+  <!-- ═══════════════════════════════════════════ -->
+  <dialog id="tip-dialog" aria-labelledby="tip-dialog-title">
+    <div class="dialog-panel">
+      <!-- Header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 flex-shrink-0">
+        <div class="flex items-center gap-3 min-w-0">
+          <div id="tip-dialog-badge" class="w-10 h-10 rounded-lg bg-brand-accent/15 flex items-center justify-center flex-shrink-0">
+            <span id="tip-dialog-number" class="text-brand-accent font-bold text-lg">01</span>
+          </div>
+          <div class="min-w-0">
+            <p class="text-xs text-brand-text-muted font-medium uppercase tracking-wider">Tip Legal</p>
+            <h3 id="tip-dialog-title" class="text-base sm:text-lg font-bold text-white leading-tight truncate"></h3>
+          </div>
+        </div>
+        <button id="tip-dialog-close" class="w-10 h-10 rounded-full hover:bg-white/10 flex items-center justify-center transition-colors flex-shrink-0 cursor-pointer ml-2" aria-label="Cerrar">
+          <svg class="w-5 h-5 text-brand-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Body (scrollable) -->
+      <div class="dialog-body px-5 sm:px-6 py-5" id="tip-dialog-body">
+        <!-- Loading skeleton (shown first, then replaced) -->
+        <div id="tip-loading" class="space-y-4">
+          <div class="tip-loading-skeleton h-4 bg-white/10 rounded-lg w-3/4"></div>
+          <div class="tip-loading-skeleton h-3 bg-white/10 rounded-lg w-full" style="animation-delay: 0.1s;"></div>
+          <div class="tip-loading-skeleton h-3 bg-white/10 rounded-lg w-5/6" style="animation-delay: 0.2s;"></div>
+          <div class="space-y-3 mt-6">
+            <div class="flex gap-3 items-start">
+              <div class="tip-loading-skeleton w-9 h-9 bg-white/10 rounded-full flex-shrink-0" style="animation-delay: 0.15s;"></div>
+              <div class="flex-1 space-y-2">
+                <div class="tip-loading-skeleton h-3.5 bg-white/10 rounded-lg w-2/3" style="animation-delay: 0.2s;"></div>
+                <div class="tip-loading-skeleton h-2.5 bg-white/10 rounded-lg w-full" style="animation-delay: 0.25s;"></div>
+                <div class="tip-loading-skeleton h-2.5 bg-white/10 rounded-lg w-4/5" style="animation-delay: 0.3s;"></div>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <div class="tip-loading-skeleton w-9 h-9 bg-white/10 rounded-full flex-shrink-0" style="animation-delay: 0.25s;"></div>
+              <div class="flex-1 space-y-2">
+                <div class="tip-loading-skeleton h-3.5 bg-white/10 rounded-lg w-1/2" style="animation-delay: 0.3s;"></div>
+                <div class="tip-loading-skeleton h-2.5 bg-white/10 rounded-lg w-full" style="animation-delay: 0.35s;"></div>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <div class="tip-loading-skeleton w-9 h-9 bg-white/10 rounded-full flex-shrink-0" style="animation-delay: 0.35s;"></div>
+              <div class="flex-1 space-y-2">
+                <div class="tip-loading-skeleton h-3.5 bg-white/10 rounded-lg w-3/5" style="animation-delay: 0.4s;"></div>
+                <div class="tip-loading-skeleton h-2.5 bg-white/10 rounded-lg w-5/6" style="animation-delay: 0.45s;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Actual content (injected by JS) -->
+        <div id="tip-content" class="hidden"></div>
+      </div>
+
+      <!-- Footer -->
+      <div class="px-5 sm:px-6 py-4 border-t border-white/10 flex-shrink-0">
+        <a href="#contacto" id="tip-dialog-cta" class="group w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-accent hover:bg-brand-accent-hover text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 text-sm">
+          ¿Tienes dudas? Consúltame
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FLOATING BUTTONS (WhatsApp + Instagram) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="floating-buttons" class="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50 flex flex-col gap-2 sm:gap-3">
+    <!-- WhatsApp -->
+    <a
+      href="https://wa.me/573001234567?text=Hola%2C%20quiero%20agendar%20una%20consulta%20legal."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp"
+      class="floating-btn group w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-brand-primary hover:bg-brand-primary-light flex items-center justify-center shadow-lg shadow-brand-primary/30 transition-all duration-300 hover:scale-110"
+    >
+      <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="absolute left-full ml-3 px-3 py-1.5 bg-brand-surface text-white text-xs font-medium rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        WhatsApp
+      </span>
+    </a>
+
+    <!-- Instagram -->
+    <a
+      href="https://instagram.com/abogadojacob"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Seguir en Instagram"
+      class="floating-btn group w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-brand-surface-light hover:bg-brand-primary flex items-center justify-center shadow-lg shadow-black/30 border border-white/10 transition-all duration-300 hover:scale-110 hover:border-brand-primary"
+      style="animation-delay: 0.5s;"
+    >
+      <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+      <span class="absolute left-full ml-3 px-3 py-1.5 bg-brand-surface text-white text-xs font-medium rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        Instagram
+      </span>
+    </a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BACK TO TOP (with scroll progress ring) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <button id="back-to-top" aria-label="Volver arriba">
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2.5"/>
+      <circle class="progress-ring-circle" id="progress-circle" cx="24" cy="24" r="20" fill="none" stroke="#00695C" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="125.66" stroke-dashoffset="125.66"/>
+    </svg>
+    <svg class="relative w-5 h-5 text-white m-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- JAVASCRIPT -->
+  <!-- ═══════════════════════════════════════════ -->
+  <script>
+    // ══════════════════════════════════════════
+    // PRELOADER
+    // ══════════════════════════════════════════
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      // Small delay so animation completes
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+        // Remove from DOM after transition
+        preloader.addEventListener('transitionend', () => {
+          preloader.remove();
+        }, { once: true });
+      }, 1000);
+    });
+
+
+    // ══════════════════════════════════════════
+    // REVEAL ON SCROLL (Staggered via IntersectionObserver)
+    // ══════════════════════════════════════════
+    document.addEventListener('DOMContentLoaded', () => {
+      // Stagger children within grid containers
+      const grids = ['services-grid', 'videos-grid', 'tips-grid'];
+      grids.forEach(gridId => {
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
+        const children = grid.querySelectorAll('.reveal');
+        children.forEach((child, i) => {
+          child.style.transitionDelay = `${i * 0.08}s`;
+        });
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    });
+
+
+    // ══════════════════════════════════════════
+    // MOBILE MENU
+    // ══════════════════════════════════════════
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    let menuOpen = false;
+
+    mobileMenuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('menu-open');
+      mobileMenuBtn.setAttribute('aria-expanded', menuOpen);
+      menuIcon.setAttribute('d',
+        menuOpen
+          ? 'M6 18L18 6M6 6l12 12'
+          : 'M4 6h16M4 12h16M4 18h16'
+      );
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('menu-open');
+        menuOpen = false;
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      });
+    });
+
+
+    // ══════════════════════════════════════════
+    // NAVBAR: shadow on scroll + active link tracking
+    // ══════════════════════════════════════════
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
+    const sections = document.querySelectorAll('section[id]');
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 120;
+
+      let current = '';
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollY >= top && scrollY < top + height) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.dataset.section === current);
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      // Shadow
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg', 'shadow-black/10');
+      } else {
+        navbar.classList.remove('shadow-lg', 'shadow-black/10');
+      }
+      // Active nav
+      updateActiveNav();
+    }, { passive: true });
+
+
+    // ══════════════════════════════════════════
+    // BACK TO TOP + SCROLL PROGRESS RING
+    // ══════════════════════════════════════════
+    const backToTop = document.getElementById('back-to-top');
+    const progressCircle = document.getElementById('progress-circle');
+    const circumference = 2 * Math.PI * 20; // r=20
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+
+      // Show/hide button
+      if (scrollTop > 400) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+
+      // Update ring
+      const offset = circumference - (progress * circumference);
+      progressCircle.style.strokeDashoffset = offset;
+    }, { passive: true });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    // ══════════════════════════════════════════
+    // HERO PARALLAX (desktop only)
+    // ══════════════════════════════════════════
+    const isDesktop = window.matchMedia('(min-width: 1024px)');
+
+    function handleParallax() {
+      if (!isDesktop.matches) return;
+      const layers = document.querySelectorAll('#hero .parallax-layer');
+      const scrollY = window.scrollY;
+      const heroH = document.getElementById('hero').offsetHeight;
+
+      if (scrollY > heroH) return; // Only within hero
+
+      layers.forEach((layer) => {
+        const speed = parseFloat(layer.dataset.parallaxSpeed) || 0;
+        layer.style.transform = `translate3d(0, ${scrollY * speed}px, 0)`;
+      });
+    }
+
+    window.addEventListener('scroll', handleParallax, { passive: true });
+
+
+    // ══════════════════════════════════════════
+    // FORM: Real-time validation
+    // ══════════════════════════════════════════
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.getElementById('btn-icon');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    const validators = {
+      nombre: {
+        validate: (v) => v.trim().length >= 3,
+        message: 'El nombre debe tener al menos 3 caracteres'
+      },
+      email: {
+        validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+        message: 'Ingresa un correo electrónico válido'
+      },
+      asunto: {
+        validate: (v) => v !== '',
+        message: 'Selecciona un asunto'
+      },
+      mensaje: {
+        validate: (v) => v.trim().length >= 10,
+        message: 'El mensaje debe tener al menos 10 caracteres'
+      }
+    };
+
+    // Track which fields have been interacted with
+    const touched = new Set();
+
+    function validateField(id) {
+      const el = document.getElementById(id);
+      const wrapper = el.closest('.field-wrapper');
+      const errorEl = document.querySelector(`[data-error-for="${id}"]`);
+      const rule = validators[id];
+
+      if (!rule || !touched.has(id)) return true;
+
+      const value = el.value;
+      const isValid = rule.validate(value);
+
+      wrapper.classList.toggle('valid', isValid);
+      wrapper.classList.toggle('invalid', !isValid);
+      if (errorEl) {
+        errorEl.textContent = isValid ? '' : rule.message;
+      }
+
+      return isValid;
+    }
+
+    // Attach real-time validation
+    ['nombre', 'email', 'asunto', 'mensaje'].forEach((id) => {
+      const el = document.getElementById(id);
+      const eventType = el.tagName === 'SELECT' ? 'change' : 'input';
+
+      // Mark as touched on first interaction
+      el.addEventListener('blur', () => {
+        touched.add(id);
+        validateField(id);
+      }, { once: true });
+
+      // Validate on input (only after touched)
+      el.addEventListener(eventType, () => {
+        if (touched.has(id)) validateField(id);
+      });
+    });
+
+    // Submit handler
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Touch all fields and validate
+      ['nombre', 'email', 'asunto', 'mensaje'].forEach(id => touched.add(id));
+      const allValid = ['nombre', 'email', 'asunto', 'mensaje'].every(id => validateField(id));
+
+      if (!allValid) {
+        // Focus first invalid field
+        const firstInvalid = contactForm.querySelector('.field-wrapper.invalid .form-input, .field-wrapper.invalid .form-select');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      // Show loading
+      btnText.textContent = 'Enviando...';
+      btnIcon.classList.add('hidden');
+      btnSpinner.classList.remove('hidden');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70');
+
+      formSuccess.classList.add('hidden');
+      formError.classList.add('hidden');
+
+      const formData = {
+        nombre: document.getElementById('nombre').value,
+        email: document.getElementById('email').value,
+        asunto: document.getElementById('asunto').value,
+        mensaje: document.getElementById('mensaje').value,
+      };
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/contacto@abogadojacob.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            Nombre: formData.nombre,
+            Email: formData.email,
+            Asunto: formData.asunto,
+            Mensaje: formData.mensaje,
+            _subject: `Nueva consulta legal: ${formData.asunto}`,
+          }),
+        });
+
+        if (response.ok) {
+          formSuccess.classList.remove('hidden');
+          contactForm.reset();
+          // Reset validation states
+          document.querySelectorAll('.field-wrapper').forEach(w => {
+            w.classList.remove('valid', 'invalid');
+          });
+          document.querySelectorAll('.field-error').forEach(e => e.textContent = '');
+          touched.clear();
+        } else {
+          throw new Error('Error en el envío');
+        }
+      } catch (error) {
+        formError.classList.remove('hidden');
+        console.error('Error:', error);
+      } finally {
+        btnText.textContent = 'Enviar Mensaje';
+        btnIcon.classList.remove('hidden');
+        btnSpinner.classList.add('hidden');
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-70');
+      }
+    });
+
+    // ══════════════════════════════════════════
+    // TIP DIALOG SYSTEM (lazy-loaded content)
+    // ══════════════════════════════════════════
+    const tipDialog = document.getElementById('tip-dialog');
+    const tipDialogTitle = document.getElementById('tip-dialog-title');
+    const tipDialogNumber = document.getElementById('tip-dialog-number');
+    const tipLoading = document.getElementById('tip-loading');
+    const tipContent = document.getElementById('tip-content');
+    const tipDialogClose = document.getElementById('tip-dialog-close');
+    const tipDialogCTA = document.getElementById('tip-dialog-cta');
+
+    // Pedagogical content for all 8 tips (loaded on demand)
+    const tipsData = [
+      {
+        title: 'Conoce tus derechos al ser detenido',
+        intro: 'Ser detenido es una situaci\u00f3n estresante, pero conocer tus derechos puede marcar la diferencia entre una detenci\u00f3n legal y un abuso de autoridad. En Colombia, la Constituci\u00f3n y el C\u00f3digo de Procedimiento Penal te protegen.',
+        steps: [
+          { title: 'Mant\u00e9n la calma y coopera', detail: 'No opongas resistencia f\u00edsica. Identif\u00edcate si te lo piden, pero recuerda que no est\u00e1s obligado a dar informaci\u00f3n adicional m\u00e1s all\u00e1 de tu nombre y documento de identidad.' },
+          { title: 'Exige conocer el motivo', detail: 'La autoridad est\u00e1 obligada a informarte inmediatamente por qu\u00e9 te detienen. Si no lo hacen, la detenci\u00f3n puede ser ilegal. Preg\u00fantalo de forma respetuosa pero firme.' },
+          { title: 'Ejerce tu derecho al silencio', detail: 'El art\u00edculo 33 de la Constituci\u00f3n establece que nadie est\u00e1 obligado a declarar contra s\u00ed mismo. Todo lo que digas puede ser usado en tu contra, incluso comentarios informales.' },
+          { title: 'Solicita un abogado de inmediato', detail: 'Tienes derecho a un abogado desde el primer momento. Si no puedes pagarlo, el Estado debe asignarte un defensor p\u00fablico. No firmes ning\u00fan documento sin que tu abogado lo revise.' },
+          { title: 'Realiza una llamada', detail: 'Tienes derecho a comunicarte con un familiar o persona de confianza para informar sobre tu situaci\u00f3n. Este derecho no puede ser negado bajo ninguna circunstancia.' }
+        ],
+        takeaway: 'Recuerda: una detenci\u00f3n ilegal puede ser impugnada mediante habeas corpus. Si sientes que tus derechos fueron vulnerados, documenta todo (nombres de oficiales, hora, lugar) y busca asesor\u00eda legal de inmediato.',
+        legalBase: 'Art. 28, 29, 33 Constituci\u00f3n Pol\u00edtica de Colombia; Art. 297-303 C\u00f3digo de Procedimiento Penal'
+      },
+      {
+        title: 'Plazos para impugnar una multa',
+        intro: 'El tiempo es tu recurso m\u00e1s valioso cuando recibes una multa. Cada tipo de multa tiene plazos espec\u00edficos para impugnaci\u00f3n, y perderlos significa aceptarla autom\u00e1ticamente. Aqu\u00ed te explico c\u00f3mo actuar.',
+        steps: [
+          { title: 'Identifica el tipo de multa', detail: 'Las multas de tr\u00e1nsito, administrativas y fiscales tienen plazos diferentes. Una multa de tr\u00e1nsito generalmente te da 5 d\u00edas h\u00e1biles para comparecer; una administrativa puede darte hasta 10 d\u00edas.' },
+          { title: 'Lee la notificaci\u00f3n completa', detail: 'El documento de la multa debe incluir: la norma infringida, los hechos, las pruebas, el monto y los recursos disponibles. Si falta alguno de estos elementos, la multa podr\u00eda ser anulable.' },
+          { title: 'Re\u00fane las pruebas inmediatamente', detail: 'Fotos, videos, testimonios, registros de GPS o cualquier evidencia que demuestre tu inocencia o atenuantes. El tiempo deteriora las pruebas; act\u00faa r\u00e1pido.' },
+          { title: 'Presenta el recurso por escrito', detail: 'Redacta un recurso de reposici\u00f3n (ante la misma autoridad) o de apelaci\u00f3n (ante el superior). Debe incluir: tus datos, n\u00famero de la multa, fundamentos de hecho y de derecho, pruebas y petici\u00f3n concreta.' },
+          { title: 'Haz seguimiento al expediente', detail: 'Conserva copia sellada de tu recurso. Verifica los plazos de respuesta de la autoridad (generalmente 30 d\u00edas h\u00e1biles). Si no responden a tiempo, opera el silencio administrativo positivo.' }
+        ],
+        takeaway: 'No pagues una multa injusta por desconocimiento. Muchas multas tienen vicios de forma o de fondo que permiten su anulaci\u00f3n. Un abogado puede identificar estas fallas r\u00e1pidamente.',
+        legalBase: 'Art. 135-137 C\u00f3digo Nacional de Tr\u00e1nsito; Art. 74-80 CPACA (C\u00f3digo de Procedimiento Administrativo)'
+      },
+      {
+        title: 'Documenta todo contrato por escrito',
+        intro: 'Los acuerdos verbales, aunque legalmente v\u00e1lidos en muchos casos, son extremadamente dif\u00edciles de probar ante un juez. Un contrato escrito es tu mejor protecci\u00f3n.',
+        steps: [
+          { title: 'Identifica a las partes claramente', detail: 'Incluye nombres completos, n\u00fameros de c\u00e9dula, direcciones y datos de contacto de todas las partes involucradas. Si es una empresa, incluye NIT, representante legal y poder de representaci\u00f3n.' },
+          { title: 'Define el objeto del contrato', detail: 'Describe con precisi\u00f3n qu\u00e9 se est\u00e1 acordando: el servicio a prestar, el bien a entregar, las condiciones espec\u00edficas. Evita ambig\u00fcedades que puedan generar interpretaciones diferentes.' },
+          { title: 'Establece plazos y valores claros', detail: 'Fechas de inicio y fin, montos a pagar, formas de pago, penalizaciones por incumplimiento y condiciones de terminaci\u00f3n anticipada. Todo debe quedar expl\u00edcito.' },
+          { title: 'Incluye cl\u00e1usulas de protecci\u00f3n', detail: 'Cl\u00e1usulas de confidencialidad, garant\u00edas, resoluci\u00f3n de conflictos (si por mediaci\u00f3n, conciliaci\u00f3n o v\u00eda judicial), y legislaci\u00f3n aplicable.' },
+          { title: 'Firma y conserva copias', detail: 'Ambas partes deben firmar todas las p\u00e1ginas (no solo la \u00faltima). Conserva una copia original. Para mayor seguridad, autentica las firmas ante notar\u00eda.' }
+        ],
+        takeaway: 'Un contrato bien redactado no es un gasto, es una inversi\u00f3n en tranquilidad. Te protege de malentendidos, incumplimientos y fraudes.',
+        legalBase: 'Art. 1494-1501 C\u00f3digo Civil Colombiano; Art. 824 C\u00f3digo de Comercio'
+      },
+      {
+        title: 'La tutela protege tus derechos fundamentales',
+        intro: 'La acci\u00f3n de tutela es el mecanismo m\u00e1s r\u00e1pido y efectivo para proteger tus derechos fundamentales en Colombia. No necesitas abogado para presentarla, y el juez tiene solo 10 d\u00edas para fallar.',
+        steps: [
+          { title: 'Identifica el derecho vulnerado', detail: 'La tutela protege derechos fundamentales: vida, salud (cuando est\u00e1 en peligro), educaci\u00f3n, debido proceso, petici\u00f3n, igualdad, trabajo, dignidad humana, entre otros.' },
+          { title: 'Verifica que no exista otro recurso', detail: 'La tutela es subsidiaria; es decir, solo procede cuando no hay otro mecanismo de defensa judicial, o cuando se usa como mecanismo transitorio para evitar un perjuicio irremediable.' },
+          { title: 'Redacta la solicitud', detail: 'Incluye: tus datos, qui\u00e9n vulnera tu derecho (persona, empresa o entidad), los hechos concretos (con fechas), el derecho vulnerado, las pruebas que tengas y lo que pides al juez.' },
+          { title: 'Pres\u00e9ntala ante cualquier juzgado', detail: 'Puedes radicarla en cualquier juzgado del lugar donde ocurre la vulneraci\u00f3n. No necesita abogado, no tiene costo, no requiere formalidades especiales. Puede ser incluso verbal.' },
+          { title: 'Espera y haz seguimiento', detail: 'El juez tiene 10 d\u00edas h\u00e1biles para decidir. Si falla a tu favor, la orden es de cumplimiento inmediato. Si no, puedes impugnar en 3 d\u00edas.' }
+        ],
+        takeaway: 'La tutela es tu herramienta m\u00e1s poderosa como ciudadano. Ha sido usada exitosamente para acceder a tratamientos m\u00e9dicos, pensiones, servicios p\u00fablicos y muchos otros derechos.',
+        legalBase: 'Art. 86 Constituci\u00f3n Pol\u00edtica; Decreto 2591 de 1991'
+      },
+      {
+        title: 'Prescripci\u00f3n de deudas',
+        intro: 'Las deudas no son eternas. La ley establece plazos m\u00e1ximos durante los cuales un acreedor puede cobrar judicialmente. Pasado ese tiempo, la obligaci\u00f3n prescribe y ya no es exigible ante un juez.',
+        steps: [
+          { title: 'Conoce los plazos seg\u00fan el tipo de deuda', detail: 'Deudas civiles (contratos, pagar\u00e9s): 5 a\u00f1os. Deudas tributarias: 5 a\u00f1os. Deudas laborales (prestaciones): 3 a\u00f1os. Deudas por servicios p\u00fablicos: 5 a\u00f1os. Facturas comerciales: 3 a\u00f1os.' },
+          { title: 'Determina desde cu\u00e1ndo se cuenta el plazo', detail: 'El t\u00e9rmino de prescripci\u00f3n generalmente empieza a correr desde la fecha de vencimiento de la obligaci\u00f3n o desde el \u00faltimo pago que realizaste.' },
+          { title: 'Cuidado con la interrupci\u00f3n', detail: 'El plazo se reinicia si: reconoces la deuda por escrito, haces un abono parcial, o el acreedor presenta demanda judicial. Un simple cobro telef\u00f3nico NO interrumpe la prescripci\u00f3n.' },
+          { title: 'Prescripci\u00f3n vs. caducidad', detail: 'La prescripci\u00f3n debe ser alegada (el juez no la aplica de oficio). La caducidad s\u00ed opera autom\u00e1ticamente. Conocer la diferencia es clave para tu defensa.' },
+          { title: 'C\u00f3mo alegarla', detail: 'Si te demandan por una deuda prescrita, debes presentar la excepci\u00f3n de prescripci\u00f3n en tu contestaci\u00f3n de la demanda. No basta con ignorar el proceso.' }
+        ],
+        takeaway: 'Que una deuda prescriba no significa que desaparezca de los reportes crediticios. Centrales de riesgo (DataCr\u00e9dito, TransUnion) tienen sus propios plazos de permanencia (m\u00e1x. 4 a\u00f1os). Consulta siempre con un abogado antes de tomar decisiones.',
+        legalBase: 'Art. 2535-2536 C\u00f3digo Civil; Art. 488 C\u00f3digo de Comercio; Ley 1266 de 2008 (Habeas Data)'
+      },
+      {
+        title: 'Derecho de petici\u00f3n: tu voz ante el Estado',
+        intro: 'El derecho de petici\u00f3n es una de las herramientas m\u00e1s poderosas que tienes como ciudadano. Permite que cualquier persona, sin necesidad de abogado, solicite informaci\u00f3n, haga consultas o presente quejas ante cualquier entidad.',
+        steps: [
+          { title: 'Entiende los tipos de petici\u00f3n', detail: 'Petici\u00f3n de inter\u00e9s general o particular, consultas (sobre temas espec\u00edficos), quejas (por mal funcionamiento del servicio), reclamos (por prestaciones indebidas) y solicitud de documentos.' },
+          { title: 'Redacta tu petici\u00f3n correctamente', detail: 'Incluye: tus datos completos, la autoridad a quien va dirigida, los hechos que motivan la petici\u00f3n, lo que solicitas concretamente, las normas que sustentan tu pedido y tu firma.' },
+          { title: 'Conoce los plazos de respuesta', detail: 'Peticiones generales: 15 d\u00edas h\u00e1biles. Solicitud de documentos: 10 d\u00edas h\u00e1biles. Consultas: 30 d\u00edas h\u00e1biles. Si no responden a tiempo, la autoridad comete falta disciplinaria.' },
+          { title: 'Rad\u00edcala y conserva el comprobante', detail: 'Puedes presentarla presencialmente (exige sello de radicado) o por correo electr\u00f3nico (conserva la confirmaci\u00f3n de env\u00edo). Este comprobante es tu prueba del plazo.' },
+          { title: 'Si no te responden, usa la tutela', detail: 'El derecho de petici\u00f3n es un derecho fundamental. Si la entidad no responde dentro del plazo legal, puedes presentar una acci\u00f3n de tutela para obligarles a contestar.' }
+        ],
+        takeaway: 'No subestimes el poder de un derecho de petici\u00f3n bien redactado. Muchos problemas con entidades p\u00fablicas se resuelven sin necesidad de demandas, simplemente ejerciendo este derecho constitucional.',
+        legalBase: 'Art. 23 Constituci\u00f3n Pol\u00edtica; Art. 13-33 CPACA (Ley 1437 de 2011)'
+      },
+      {
+        title: 'No ignores una notificaci\u00f3n judicial',
+        intro: 'Recibir una notificaci\u00f3n judicial puede ser intimidante, pero ignorarla es el peor error que puedes cometer. Tu inacci\u00f3n ser\u00e1 interpretada como aceptaci\u00f3n de los hechos y puede resultar en fallos en tu contra.',
+        steps: [
+          { title: 'Lee la notificaci\u00f3n completa y con calma', detail: 'Identifica: qu\u00e9 juzgado la env\u00eda, el n\u00famero del proceso, qui\u00e9n te demanda, por qu\u00e9 concepto y cu\u00e1l es el plazo para responder. No entres en p\u00e1nico.' },
+          { title: 'Verifica la autenticidad', detail: 'Las notificaciones judiciales llegan por correo certificado, personalmente o por aviso. Nunca te pedir\u00e1n pagos por WhatsApp, email o llamadas. Si dudas, consulta directamente con el juzgado.' },
+          { title: 'Respeta los plazos estrictamente', detail: 'En procesos civiles tienes entre 10 y 20 d\u00edas para contestar la demanda. En procesos laborales, hasta la audiencia. Pasar el plazo puede significar perder la oportunidad de defenderte.' },
+          { title: 'Busca asesor\u00eda legal inmediatamente', detail: 'Un abogado puede evaluar la demanda, identificar debilidades en los argumentos del demandante y preparar una estrategia de defensa. Cada d\u00eda que pasa sin actuar es un d\u00eda perdido.' },
+          { title: 'Prepara tu contestaci\u00f3n con pruebas', detail: 'Recopila todos los documentos, contratos, recibos, mensajes o testigos que respalden tu posici\u00f3n. Una defensa bien documentada desde el inicio cambia completamente el resultado de un proceso.' }
+        ],
+        takeaway: 'La justicia no espera. Si recibes una notificaci\u00f3n y no actuas, el juez puede dictar sentencia en tu contra sin haberte escuchado. Eso se llama "fallo en rebell\u00eda" y es completamente evitable.',
+        legalBase: 'Art. 29 Constituci\u00f3n Pol\u00edtica (debido proceso); Art. 289-305 C\u00f3digo General del Proceso'
+      },
+      {
+        title: 'Consulta legal preventiva',
+        intro: 'La mayor\u00eda de los problemas legales graves comenzaron como situaciones simples que se pudieron resolver f\u00e1cilmente con asesor\u00eda oportuna. Prevenir no solo es m\u00e1s econ\u00f3mico: es m\u00e1s inteligente.',
+        steps: [
+          { title: 'Consulta antes de firmar cualquier documento', detail: 'Contratos de arrendamiento, compraventas, pagar\u00e9s, poderes, sociedades. Un abogado puede detectar cl\u00e1usulas abusivas, riesgos ocultos y falta de garant\u00edas en minutos.' },
+          { title: 'Asesorate antes de emprender', detail: 'Si vas a crear una empresa, contratar empleados o iniciar un proyecto, la estructura legal correcta te protege de responsabilidades personales y optimiza tus obligaciones tributarias.' },
+          { title: 'No esperes a que el problema escale', detail: 'Un conflicto con un vecino, un cobro injusto, una cl\u00e1usula de un contrato que no entiendes. Cuanto antes consultes, m\u00e1s opciones tendr\u00e1s y menos costar\u00e1 resolverlo.' },
+          { title: 'Conoce tus obligaciones', detail: 'Obligaciones tributarias, laborales, contractuales. El desconocimiento de la ley no te exime de cumplirla. Una consulta preventiva te pone al d\u00eda y evita sanciones.' },
+          { title: 'Elige bien a tu abogado', detail: 'Busca un abogado con experiencia en el \u00e1rea que necesitas, que te explique en lenguaje claro, que sea transparente con sus honorarios y que te d\u00e9 confianza.' }
+        ],
+        takeaway: 'Una hora de consulta preventiva puede ahorrarte meses de litigio y miles en honorarios, multas e indemnizaciones. La prevenci\u00f3n legal es la mejor inversi\u00f3n que puedes hacer.',
+        legalBase: 'Principio general de buena fe (Art. 83 Constituci\u00f3n Pol\u00edtica)'
+      }
+    ];
+
+    // Render a tip's content into HTML
+    function renderTipContent(tip) {
+      let stepsHtml = tip.steps.map((step, i) => `
+        <div class="flex gap-4 items-start">
+          <div class="step-number">${i + 1}</div>
+          <div class="flex-1">
+            <h4 class="font-semibold text-white text-sm mb-1">${step.title}</h4>
+            <p class="text-brand-text-muted text-sm leading-relaxed">${step.detail}</p>
+          </div>
+        </div>
+      `).join('');
+
+      return `
+        <p class="text-brand-text-muted leading-relaxed mb-6">${tip.intro}</p>
+        <div class="space-y-5 mb-6">
+          ${stepsHtml}
+        </div>
+        <div class="bg-brand-primary/15 border border-brand-primary/20 rounded-xl p-4 mb-4">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-brand-primary-light flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+            <p class="text-sm text-brand-text leading-relaxed"><strong class="text-brand-primary-light">Recuerda:</strong> ${tip.takeaway}</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-xs text-brand-text-muted/60">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          <span>Base legal: ${tip.legalBase}</span>
+        </div>
+      `;
+    }
+
+    // Open dialog with loading effect
+    function openTipDialog(tipId) {
+      const tip = tipsData[tipId];
+      if (!tip) return;
+
+      // Set header info immediately
+      tipDialogNumber.textContent = String(tipId + 1).padStart(2, '0');
+      tipDialogTitle.textContent = tip.title;
+
+      // Show loading, hide content
+      tipLoading.classList.remove('hidden');
+      tipContent.classList.add('hidden');
+      tipContent.innerHTML = '';
+
+      // Open the dialog
+      tipDialog.showModal();
+
+      // Simulate lazy load with delay for smooth UX
+      setTimeout(() => {
+        tipContent.innerHTML = renderTipContent(tip);
+        tipLoading.classList.add('hidden');
+        tipContent.classList.remove('hidden');
+        // Scroll body to top
+        tipDialog.querySelector('.dialog-body').scrollTop = 0;
+      }, 450);
+    }
+
+    // Close dialog
+    function closeTipDialog() {
+      // Animate out
+      const panel = tipDialog.querySelector('.dialog-panel');
+      panel.style.transform = 'scale(0.92) translateY(20px)';
+      panel.style.opacity = '0';
+      setTimeout(() => {
+        tipDialog.close();
+        // Reset for next open
+        panel.style.transform = '';
+        panel.style.opacity = '';
+      }, 250);
+    }
+
+    tipDialogClose.addEventListener('click', closeTipDialog);
+
+    // Close on backdrop click
+    tipDialog.addEventListener('click', (e) => {
+      if (e.target === tipDialog) closeTipDialog();
+    });
+
+    // Close on Escape (native dialog behavior, but with animation)
+    tipDialog.addEventListener('cancel', (e) => {
+      e.preventDefault();
+      closeTipDialog();
+    });
+
+    // Close dialog when CTA is clicked
+    tipDialogCTA.addEventListener('click', () => {
+      closeTipDialog();
+    });
+
+    // Attach click handlers to tip cards
+    document.querySelectorAll('[data-tip-id]').forEach((card) => {
+      const handler = () => openTipDialog(parseInt(card.dataset.tipId, 10));
+      card.addEventListener('click', handler);
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handler();
+        }
+      });
+    });
+
+
+    // ══════════════════════════════════════════
+    // SMOOTH SCROLL (anchor links with offset)
+    // ══════════════════════════════════════════
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
