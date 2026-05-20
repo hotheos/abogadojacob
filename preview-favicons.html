@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuestas de Favicon | Abogado Jacob</title>
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FAFAF7;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
+    }
+    .serif-title {
+      font-family: 'Playfair Display', serif;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(184, 134, 11, 0.15);
+    }
+  </style>
+</head>
+<body class="text-neutral-900 min-h-screen pb-16">
+  
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto px-4 pt-12 pb-8 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-500/10 text-amber-800 rounded-full text-xs font-semibold uppercase tracking-wider border border-amber-500/20 mb-4">
+      Identidad Visual Premium
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight serif-title text-neutral-950 mb-3">
+      Propuestas de <span class="text-amber-700 italic">Favicon</span>
+    </h1>
+    <p class="text-neutral-600 max-w-xl mx-auto text-sm md:text-base">
+      Diseñadas a medida para el portal de <strong class="text-neutral-950">Abogado Jacob</strong>, buscando proyectar prestigio, equilibrio legal y excelencia en Pereira.
+    </p>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-6xl mx-auto px-4">
+    
+    <!-- Tab Mockup Interactive Preview -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 mb-12 shadow-xl shadow-amber-950/5">
+      <h2 class="text-lg font-bold text-neutral-900 mb-6 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 bg-amber-600 rounded-full"></span>
+        Simulador Interactivo de Pestaña del Navegador
+      </h2>
+      
+      <!-- Controls -->
+      <div class="flex flex-wrap gap-4 items-center justify-between mb-6 border-b border-neutral-200/60 pb-4">
+        <div class="flex gap-2">
+          <button onclick="setTheme('light')" id="btn-light" class="px-4 py-2 text-xs font-bold rounded-lg border border-neutral-300 bg-white text-neutral-800 shadow-sm transition-all hover:bg-neutral-50 cursor-pointer">
+            Modo Claro
+          </button>
+          <button onclick="setTheme('dark')" id="btn-dark" class="px-4 py-2 text-xs font-bold rounded-lg border border-neutral-700 bg-neutral-900 text-white shadow-sm transition-all hover:bg-neutral-800 cursor-pointer">
+            Modo Oscuro
+          </button>
+        </div>
+        <p class="text-xs text-neutral-500">
+          Haz clic en las propuestas de abajo para ver cómo lucen aquí arriba.
+        </p>
+      </div>
+
+      <!-- Browser Bar Mockup -->
+      <div id="browser-container" class="rounded-xl border border-neutral-300/80 bg-neutral-100 shadow-md overflow-hidden transition-colors duration-300">
+        <!-- Top bar (dots and tabs) -->
+        <div id="browser-top" class="flex items-center px-4 pt-3 pb-2 gap-4 border-b border-neutral-200 transition-colors duration-300">
+          <!-- Dots -->
+          <div class="flex gap-1.5 shrink-0">
+            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+          </div>
+          
+          <!-- Tab -->
+          <div id="browser-tab" class="flex items-center gap-2.5 px-4 py-2 rounded-t-lg bg-white border-x border-t border-neutral-200 text-xs font-medium text-neutral-800 max-w-[200px] shadow-[0_-2px_6px_rgba(0,0,0,0.02)] transition-all duration-300">
+            <!-- Dynamic Favicon Container -->
+            <div id="tab-favicon-preview" class="w-4 h-4 shrink-0 transition-transform duration-300">
+              <!-- Initial current favicon -->
+              <img src="favicon.svg?v=12" class="w-full h-full object-contain rounded-sm" alt="Favicon">
+            </div>
+            <span class="truncate pr-2">Abogado Jacob | Servic...</span>
+            <span class="text-neutral-400 text-[10px] ml-auto">✕</span>
+          </div>
+        </div>
+        <!-- URL Bar -->
+        <div id="browser-url-bar" class="px-4 py-2 bg-white flex items-center transition-colors duration-300">
+          <div id="browser-url-input" class="w-full max-w-md bg-neutral-100 rounded-md px-3 py-1 text-[11px] text-neutral-500 font-mono flex items-center gap-1.5 transition-colors duration-300">
+            <span class="text-green-600">🔒</span> https://abogadojacob.com
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 3 Proposals Grid -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Proposal A -->
+      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg hover:shadow-amber-950/10 hover:border-amber-500/40 transition-all duration-300 group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold bg-amber-700/10 text-amber-800 px-2 py-1 rounded-md">OPCIÓN A</span>
+            <span class="text-xs font-semibold text-neutral-500">Refinamiento Clásico</span>
+          </div>
+          
+          <h3 class="text-lg font-bold text-neutral-950 mb-2">Balanza J Realista</h3>
+          <p class="text-neutral-600 text-xs mb-6 leading-relaxed">
+            Réplica vectorial de alta definición del logotipo original. Presenta un fondo squircle dorado limpio con el degradado metálico oro-champán exacto, alineación simétrica perfecta en las cuerdas de tensión, y el corte sutil del arco izquierdo.
+          </p>
+
+          <!-- Large Vector Preview -->
+          <div class="w-24 h-24 mx-auto mb-6 bg-white rounded-2xl border border-neutral-200 shadow-inner flex items-center justify-center p-3 transition-transform group-hover:scale-105">
+            <svg id="svg-opt-a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full">
+              <defs>
+                <linearGradient id="gold-gradient-a" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#d4b45e"/>
+                  <stop offset="100%" stop-color="#9e732a"/>
+                </linearGradient>
+                <filter id="emblem-shadow-a" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#5C4310" flood-opacity="0.3"/>
+                </filter>
+              </defs>
+              <rect width="512" height="512" rx="135" fill="url(#gold-gradient-a)"/>
+                 <path d="M 110 122 H 402 V 136 H 110 Z" fill="#FFFFFF"/>
+                 <path d="M 110 129 L 50 245 M 110 129 L 170 245" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+                 <path d="M 402 129 L 342 245 M 402 129 L 462 245" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+                 <path d="M 50 245 C 50 274, 76 293, 110 293 C 144 293, 170 274, 170 245 Z" fill="#FFFFFF"/>
+                 <path d="M 342 245 C 342 274, 368 293, 402 293 C 436 293, 462 274, 462 245 Z" fill="#FFFFFF"/>
+                 <path d="M 238 136 H 274 V 315 C 274 365, 250 400, 206 400 C 175 400, 150 375, 150 345 C 150 338.4, 155.4 333, 162 333 C 168.6 333, 174 338.4, 174 345 C 174 362, 186 376, 206 376 C 228 376, 238 350, 238 315 Z" fill="#FFFFFF"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <button onclick="previewFavicon('a')" class="w-full py-2.5 text-xs font-bold text-amber-800 bg-amber-500/10 hover:bg-amber-500/20 rounded-xl transition-all cursor-pointer">
+            Ver en simulador
+          </button>
+          <button onclick="copyCode('a')" class="w-full py-2.5 text-xs font-bold text-white bg-neutral-900 hover:bg-neutral-800 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>Copiar código SVG</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Proposal B -->
+      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg hover:shadow-amber-950/10 hover:border-amber-500/40 transition-all duration-300 group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold bg-amber-700/10 text-amber-800 px-2 py-1 rounded-md">OPCIÓN B</span>
+            <span class="text-xs font-semibold text-neutral-500">Monograma de Lujo</span>
+          </div>
+          
+          <h3 class="text-lg font-bold text-neutral-950 mb-2">Sello de Prestigio</h3>
+          <p class="text-neutral-600 text-xs mb-6 leading-relaxed">
+            Un monograma clásico en tipografía serif con un trazo estilizado de la letra "J" en oro metalizado. Está rodeado por una fina línea punteada perimetral sobre fondo oscuro (carbón premium), evocando seriedad, solidez y confidencialidad absoluta.
+          </p>
+
+          <!-- Large Vector Preview -->
+          <div class="w-24 h-24 mx-auto mb-6 bg-white rounded-2xl border border-neutral-200 shadow-inner flex items-center justify-center p-3 transition-transform group-hover:scale-105">
+            <svg id="svg-opt-b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-full h-full">
+              <rect width="32" height="32" rx="8" fill="#1A1A1A"/>
+              <rect x="3" y="3" width="26" height="26" rx="5" fill="none" stroke="#B8860B" stroke-width="1.5" stroke-dasharray="4,2"/>
+              <path d="M11 9 H21 M16 9 V20 C16 23 13.5 24 11 24 C9.5 24 9.5 22.5 11 22.5 C12 22.5 13.5 22 13.5 20.5 V9" fill="none" stroke="#B8860B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <button onclick="previewFavicon('b')" class="w-full py-2.5 text-xs font-bold text-amber-800 bg-amber-500/10 hover:bg-amber-500/20 rounded-xl transition-all cursor-pointer">
+            Ver en simulador
+          </button>
+          <button onclick="copyCode('b')" class="w-full py-2.5 text-xs font-bold text-white bg-neutral-900 hover:bg-neutral-800 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>Copiar código SVG</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Proposal C -->
+      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg hover:shadow-amber-950/10 hover:border-amber-500/40 transition-all duration-300 group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold bg-amber-700/10 text-amber-800 px-2 py-1 rounded-md">OPCIÓN C</span>
+            <span class="text-xs font-semibold text-neutral-500">Modernidad y Claridad</span>
+          </div>
+          
+          <h3 class="text-lg font-bold text-neutral-950 mb-2">Balanza de la Ley</h3>
+          <p class="text-neutral-600 text-xs mb-6 leading-relaxed">
+            Una silueta circular con el emblema de la balanza clásica de la justicia. Su fondo en tono crema suave (el color vainilla de la marca) rodeado de un anillo dorado proyecta transparencia, cercanía y una visión moderna del derecho administrativo y civil.
+          </p>
+
+          <!-- Large Vector Preview -->
+          <div class="w-24 h-24 mx-auto mb-6 bg-white rounded-2xl border border-neutral-200 shadow-inner flex items-center justify-center p-3 transition-transform group-hover:scale-105">
+            <svg id="svg-opt-c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-full h-full">
+              <circle cx="16" cy="16" r="14.5" fill="#FAFAF7" stroke="#B8860B" stroke-width="1.5"/>
+              <path d="M16 12 V22 M13 22 H19" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 14 H22" stroke="#B8860B" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 14 L8 19 C8 19.5 12 19.5 12 19 Z" fill="none" stroke="#1A1A1A" stroke-width="1" stroke-linejoin="round"/>
+              <path d="M22 14 L20 19 C20 19.5 24 19.5 24 19 Z" fill="none" stroke="#1A1A1A" stroke-width="1" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <button onclick="previewFavicon('c')" class="w-full py-2.5 text-xs font-bold text-amber-800 bg-amber-500/10 hover:bg-amber-500/20 rounded-xl transition-all cursor-pointer">
+            Ver en simulador
+          </button>
+          <button onclick="copyCode('c')" class="w-full py-2.5 text-xs font-bold text-white bg-neutral-900 hover:bg-neutral-800 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>Copiar código SVG</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Integration instructions -->
+    <section class="glass-card rounded-2xl p-6 md:p-8">
+      <h2 class="text-lg font-bold text-neutral-950 mb-4 flex items-center gap-2">
+        💡 ¿Cómo aplicar tu opción favorita?
+      </h2>
+      <p class="text-neutral-600 text-sm mb-4 leading-relaxed">
+        Cada propuesta se ha diseñado directamente en formato vectorial SVG nativo. La ventaja de usar un favicon SVG es que tiene una nitidez perfecta en cualquier pantalla (incluyendo pantallas Retina) y pesa menos de 1 KB.
+      </p>
+      <div class="bg-neutral-900 rounded-xl p-4 md:p-6 font-mono text-[11px] md:text-xs text-neutral-300 overflow-x-auto shadow-inner border border-neutral-800">
+        <span class="text-neutral-500">&lt;!-- Línea que actualizaremos en el &lt;head&gt; de index.html con el código en base64 --&gt;</span><br>
+        <span class="text-amber-500">&lt;link</span> <span class="text-blue-400">rel=</span><span class="text-emerald-400">"icon"</span> <span class="text-blue-400">type=</span><span class="text-emerald-400">"image/svg+xml"</span> <span class="text-blue-400">href=</span><span class="text-amber-400">"data:image/svg+xml,[CÓDIGO_ELEGIDO]"</span><span class="text-amber-500">&gt;</span>
+      </div>
+      <p class="text-xs text-neutral-500 mt-4">
+        Una vez elijas la opción que más te guste, simplemente indícamelo en el chat y yo me encargaré de insertarlo en el código fuente de tu página de manera limpia y profesional, reemplazando el favicon actual.
+      </p>
+    </section>
+  </main>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Theme switching for browser mockup
+    function setTheme(mode) {
+      const container = document.getElementById('browser-container');
+      const topBar = document.getElementById('browser-top');
+      const tab = document.getElementById('browser-tab');
+      const urlBar = document.getElementById('browser-url-bar');
+      const urlInput = document.getElementById('browser-url-input');
+      const btnLight = document.getElementById('btn-light');
+      const btnDark = document.getElementById('btn-dark');
+
+      if (mode === 'dark') {
+        container.style.borderColor = '#404040';
+        topBar.style.backgroundColor = '#1f1f1f';
+        topBar.style.borderColor = '#2d2d2d';
+        tab.style.backgroundColor = '#2d2d2d';
+        tab.style.borderColor = '#3a3a3a';
+        tab.style.color = '#f5f5f5';
+        urlBar.style.backgroundColor = '#2d2d2d';
+        urlInput.style.backgroundColor = '#1f1f1f';
+        urlInput.style.color = '#a3a3a3';
+        
+        btnDark.classList.add('ring-2', 'ring-amber-500');
+        btnLight.classList.remove('ring-2', 'ring-amber-500');
+      } else {
+        container.style.borderColor = '#d4d4d4';
+        topBar.style.backgroundColor = '#f5f5f5';
+        topBar.style.borderColor = '#e5e5e5';
+        tab.style.backgroundColor = '#ffffff';
+        tab.style.borderColor = '#e5e5e5';
+        tab.style.color = '#262626';
+        urlBar.style.backgroundColor = '#ffffff';
+        urlInput.style.backgroundColor = '#f5f5f5';
+        urlInput.style.color = '#737373';
+        
+        btnLight.classList.add('ring-2', 'ring-amber-500');
+        btnDark.classList.remove('ring-2', 'ring-amber-500');
+      }
+    }
+
+    // Load active option in simulator
+    function previewFavicon(option) {
+      const tabIcon = document.getElementById('tab-favicon-preview');
+      if (option === 'a') {
+        tabIcon.innerHTML = '<img src="favicon.svg?v=12" class="w-full h-full object-contain rounded-sm" alt="Favicon">';
+      } else {
+        const sourceSvg = document.getElementById('svg-opt-' + option);
+        tabIcon.innerHTML = sourceSvg.outerHTML;
+      }
+      
+      // Add dynamic pulse effect to show selection
+      tabIcon.classList.add('scale-125');
+      setTimeout(() => {
+        tabIcon.classList.remove('scale-125');
+      }, 300);
+    }
+
+    // Copy to clipboard helper
+    function copyCode(option) {
+      const sourceSvg = document.getElementById('svg-opt-' + option).outerHTML;
+      // Convert to SVG URL safe encoding
+      const encoded = "data:image/svg+xml," + encodeURIComponent(sourceSvg);
+      
+      navigator.clipboard.writeText(encoded).then(() => {
+        alert('¡Código copiado al portapapeles en formato data URL! Puedes pegarlo directamente.');
+      }).catch(err => {
+        console.error('Error al copiar: ', err);
+      });
+    }
+
+    // Initialize light mode style ring
+    document.getElementById('btn-light').classList.add('ring-2', 'ring-amber-500');
+  </script>
+</body>
+</html>
