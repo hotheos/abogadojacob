@@ -322,6 +322,13 @@
     /* ═══ TIP CARD ═══ */
     .tip-card {
       transition: border-color 0.3s ease;
+      outline: none !important;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .tip-card:focus,
+    .tip-card:active {
+      outline: none !important;
+      box-shadow: none !important;
     }
     @media (hover: hover) {
       .tip-card {
@@ -548,6 +555,15 @@
     }
 
     /* ═══ TIP DIALOG / MODAL ═══ */
+    #tip-dialog-close {
+      outline: none !important;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #tip-dialog-close:focus,
+    #tip-dialog-close:active {
+      outline: none !important;
+      box-shadow: none !important;
+    }
     #tip-dialog {
       position: fixed;
       inset: 0;
