@@ -526,14 +526,22 @@
 
     /* ═══ TIP DIALOG / MODAL ═══ */
     #tip-dialog {
+      position: fixed;
+      inset: 0;
+      margin: auto;
       border: none;
       background: transparent;
       padding: 0;
-      max-width: min(640px, calc(100vw - 2rem));
+      max-width: min(760px, calc(100vw - 2rem));
       max-height: min(85vh, 85dvh);
-      width: 100%;
+      width: calc(100vw - 2rem);
       border-radius: 1.25rem;
       overflow: visible;
+    }
+    #tip-dialog[open] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     #tip-dialog::backdrop {
       background: rgba(0, 0, 0, 0);
@@ -545,6 +553,7 @@
       -webkit-backdrop-filter: blur(6px);
     }
     #tip-dialog .dialog-panel {
+      width: 100%;
       background: #FFFFFF;
       border: 1px solid rgba(184, 134, 11, 0.2);
       border-radius: 1.25rem;
@@ -573,13 +582,30 @@
       background: #B8860B;
       border-radius: 3px;
     }
-    /* Loading skeleton */
+    /* Loading skeleton shimmer effect */
     .tip-loading-skeleton {
-      animation: skeleton-pulse 1s ease-in-out infinite;
+      position: relative;
+      overflow: hidden;
+      background-color: rgba(184, 134, 11, 0.08);
+      border-radius: 0.5rem;
     }
-    @keyframes skeleton-pulse {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 0.6; }
+    .tip-loading-skeleton::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(184, 134, 11, 0.15),
+        transparent
+      );
+      animation: shimmer 1.6s infinite;
+    }
+    @keyframes shimmer {
+      100% {
+        transform: translateX(100%);
+      }
     }
     /* Step number circle */
     .step-number {
