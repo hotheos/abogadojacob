@@ -711,7 +711,7 @@
     <!-- Floating geometric decorations -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <!-- Gold scales of justice (large watermark, clearly visible) -->
-      <img src="deco-balanza.png" alt="" class="absolute bottom-[5%] left-[2%] w-72 lg:w-96 opacity-25 hidden md:block pointer-events-none" style="animation: float-slow 12s ease-in-out infinite;" loading="lazy">
+      <img src="gold-justice-emblem.png" alt="" class="absolute bottom-[5%] left-[2%] w-72 lg:w-96 opacity-25 hidden md:block pointer-events-none mix-blend-multiply" style="animation: float-slow 12s ease-in-out infinite;" loading="lazy">
       <!-- Gold circle (top-right) -->
       <div class="absolute top-[15%] right-[10%] w-40 h-40 rounded-full border border-brand-gold-muted opacity-40 hidden lg:block" style="animation: float-slow 8s ease-in-out infinite;"></div>
       <!-- Small gold dot -->
@@ -767,11 +767,15 @@
         </div>
 
         <!-- Right: Photo (parallax layer) -->
-        <div class="order-1 lg:order-2 flex justify-center lg:justify-end parallax-layer" data-parallax-speed="-0.08">
+        <div class="order-1 lg:order-2 flex justify-center lg:justify-end parallax-layer relative" data-parallax-speed="-0.08">
           <div class="relative w-full max-w-xs sm:max-w-sm lg:max-w-lg">
+            <!-- Option 3: Ondas Minimalistas behind the photo card (creates an offset luxury frame effect) -->
+            <div class="absolute -inset-6 sm:-inset-10 rounded-3xl overflow-hidden border border-brand-gold-muted bg-white pointer-events-none transform -rotate-1 lg:-rotate-2 transition-transform duration-500 hover:rotate-0 shadow-lg z-0">
+              <img src="gold-bg-waves.png" alt="" class="w-full h-full object-cover">
+            </div>
             <!-- Decorative ring -->
-            <div class="absolute -inset-4 bg-gradient-to-br from-brand-gold-muted to-brand-primary-light/10 rounded-2xl blur-2xl"></div>
-            <div class="relative hero-photo-mask rounded-2xl overflow-hidden shadow-2xl shadow-black/15 border border-brand-gold-muted">
+            <div class="absolute -inset-4 bg-gradient-to-br from-brand-gold-muted to-brand-primary-light/10 rounded-2xl blur-2xl z-0"></div>
+            <div class="relative hero-photo-mask rounded-2xl overflow-hidden shadow-2xl shadow-black/15 border border-brand-gold-muted z-10">
               <img
                 src="foto-jacob.jpg"
                 alt="Abogado Jacob, profesional legal en Pereira"
@@ -816,7 +820,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <!-- Section header -->
-      <div class="text-center mb-10 lg:mb-16 reveal relative">
+      <div class="text-center mb-10 lg:mb-16 reveal relative flex flex-col items-center">
+        <!-- Option 4: Emblema de la Justicia visible above the header tag -->
+        <div class="w-20 h-20 mb-6 rounded-full overflow-hidden border border-brand-gold-muted bg-white p-1 shadow-md hover:scale-110 transition-transform duration-300 pointer-events-auto">
+          <img src="gold-justice-emblem.png" alt="Emblema de la Justicia" class="w-full h-full object-contain">
+        </div>
         <span class="relative inline-block px-4 py-1.5 bg-brand-primary/20 text-brand-primary-light text-sm font-semibold rounded-full mb-4 tracking-wider uppercase">Servicios</span>
         <h2 class="relative text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
           Áreas de <span class="text-gold-metallic">Especialización</span>
@@ -964,7 +972,7 @@
   <!-- ═══════════════════════════════════════════ -->
   <section id="casos" class="py-14 sm:py-20 lg:py-28 bg-brand-vanilla relative overflow-hidden">
     <!-- Scales of justice as background for cases section -->
-    <img src="deco-balanza.png" alt="" class="absolute top-1/2 right-[5%] -translate-y-1/2 w-[400px] lg:w-[500px] opacity-20 pointer-events-none hidden md:block" aria-hidden="true" loading="lazy">
+    <img src="gold-justice-emblem.png" alt="" class="absolute top-1/2 right-[5%] -translate-y-1/2 w-[400px] lg:w-[500px] opacity-35 pointer-events-none hidden md:block mix-blend-multiply" aria-hidden="true" loading="lazy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <!-- Section header -->
