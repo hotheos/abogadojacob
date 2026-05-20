@@ -1056,9 +1056,24 @@
   <!-- TIPS LEGALES (Pedagogical Section) -->
   <!-- ═══════════════════════════════════════════ -->
   <section id="tips" class="py-14 sm:py-20 lg:py-28 bg-brand-surface relative overflow-hidden">
-    <!-- Option 3 (Wide): Ondas horizontales minimalistas de oro cruzando el fondo -->
-    <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-60 mix-blend-multiply z-0">
-      <img src="gold-bg-waves-wide.png" alt="" class="w-full h-full object-cover object-center">
+    <!-- Vector Golden Waves: 100% crisp on all screen resolutions, never blurry -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+      <svg class="w-full h-full opacity-40" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gold-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#8B6508" />
+            <stop offset="25%" stop-color="#D4A017" />
+            <stop offset="50%" stop-color="#FFF4B0" />
+            <stop offset="75%" stop-color="#D4A017" />
+            <stop offset="100%" stop-color="#8B6508" />
+          </linearGradient>
+        </defs>
+        <!-- Fine bezier lines representing luxury gold waves -->
+        <path d="M -50,300 C 300,150 600,450 1000,200 C 1200,100 1350,250 1500,150" stroke="url(#gold-wave-grad)" stroke-width="1.2" fill="none"/>
+        <path d="M -50,350 C 280,220 580,500 980,270 C 1180,170 1330,300 1500,220" stroke="url(#gold-wave-grad)" stroke-width="0.8" fill="none"/>
+        <path d="M -50,250 C 320,80 620,400 1020,130 C 1220,30 1370,200 1500,80" stroke="url(#gold-wave-grad)" stroke-width="0.5" fill="none"/>
+        <path d="M -50,400 C 250,280 550,580 950,330 C 1150,230 1300,380 1500,300" stroke="url(#gold-wave-grad)" stroke-width="1" fill="none"/>
+      </svg>
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
