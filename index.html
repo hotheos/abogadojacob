@@ -1164,9 +1164,7 @@
   <!-- CONTACTO (Contact Form) -->
   <!-- ═══════════════════════════════════════════ -->
   <section id="contacto" class="py-14 sm:py-20 lg:py-28 bg-brand-vanilla relative overflow-hidden">
-    <!-- Gold hero art filigree flanking the contact section instead of decorative columns -->
-    <img src="hero-art-gold.png" alt="" class="absolute left-[2%] top-1/2 -translate-y-1/2 w-[350px] lg:w-[450px] opacity-25 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
-    <img src="hero-art-gold.png" alt="" class="absolute right-[2%] top-1/2 -translate-y-1/2 w-[350px] lg:w-[450px] opacity-25 pointer-events-none hidden lg:block" aria-hidden="true" loading="lazy">
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -1223,8 +1221,12 @@
         </div>
 
         <!-- Right: Form -->
-        <div class="reveal" style="transition-delay: 0.15s;">
-          <form id="contact-form" class="elegant-frame bg-white rounded-2xl p-6 sm:p-8 border border-brand-gold-muted shadow-xl shadow-brand-gold/5" novalidate>
+        <div class="reveal relative" style="transition-delay: 0.15s;">
+          <!-- Option 3: Ondas Minimalistas behind the contact form (creates an offset luxury frame effect) -->
+          <div class="absolute -inset-6 sm:-inset-10 rounded-3xl overflow-hidden border border-brand-gold-muted bg-white pointer-events-none transform rotate-1 lg:rotate-2 transition-transform duration-500 hover:rotate-0 shadow-lg z-0">
+            <img src="gold-bg-waves.png" alt="" class="w-full h-full object-cover">
+          </div>
+          <form id="contact-form" class="relative elegant-frame bg-white rounded-2xl p-6 sm:p-8 border border-brand-gold-muted shadow-xl shadow-brand-gold/5 z-10" novalidate>
             <h3 class="text-xl font-bold text-brand-text mb-6">Envía tu mensaje</h3>
 
             <div class="space-y-5">
